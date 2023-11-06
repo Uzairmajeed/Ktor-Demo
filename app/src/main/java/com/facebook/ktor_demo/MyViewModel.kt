@@ -17,5 +17,9 @@ class MyViewModel : ViewModel() {
     suspend fun fetchFromModel() {
         val post = network.fetchData()
         _postLiveData.postValue(post)
+         if (post != null) {
+            network.PostData(post.title,post.body)
+        }
     }
+
 }

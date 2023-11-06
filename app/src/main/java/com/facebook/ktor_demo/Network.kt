@@ -14,4 +14,8 @@ class Network {
             null
         }
     }
+    suspend fun PostData(title:String,body:String){
+        getRepository.postToGoogleSheets(title, body)
+    }
+
 }
